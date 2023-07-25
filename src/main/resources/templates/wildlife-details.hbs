@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous"
+     />
+<body>
+
+ <!-- form details -->
+
+    <section
+      class="p-1 d-flex text-center align-items-center justify-content-center p-5 m-5"
+    >
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div class="align-items-center ">
+            <h3 class="text-center">WildLife Details</h3>
+            <p class="text-center">Fill in the Details of the Spotted wildLife below:</p>
+
+            <form method="post" action="/create-wildlife">
+
+            <label for="category" class="form-label">Animal Category:</label>
+            <select class="form-select" id="gender">
+                <option value="normal" selected></option>
+                <option value="endangered">Endangered species</option>
+            </select>
+            <label for="id">WildLife Id:</label>
+            <input  id="id" name="id" type="number" class="form-control" placeholder="id">
+
+            <label for="name" class="form-label">WildLife Name:</label>
+           <input type="text" class="form-control" id="name"  placeholder="name"/>
+
+            <label for="category" class="form-label">Health Status:</label>
+            <select class="form-select" id="health">
+                <option value="healthy" selected></option>
+                <option value="ill">ill</option>
+                <option value="okay">okay</option>
+            </select>
+
+            <label for="category" class="form-label">Age:</label>
+             <select class="form-select" id="age">
+                   <option value="new-born" selected></option>
+                  <option value="young">Young</option>
+                  <option value="adult">Adult</option>
+             </select>
+
+              <label for="category" class="form-label">Location:</label>
+                    <select class="form-select" id="location">
+                                <option value="Zone-A" selected></option>
+                               <option value="Near-river">Young</option>
+                               <option value="NE-Quadrant">Adult</option>
+                   </select>
+
+              <label for="name" class="form-label">Ranger Name:</label>
+                  <input type="text" class="form-control" id="rangername"  placeholder="rangername"/>
+
+            <div class="mb-4 text-center mt-3">
+                <input  type="submit" class="btn btn-primary"  value="Add Strength">
+            </div>
+
+             </form>
+          </div>
+
+      </div>
+    </section>
+
+</body>
+</html>
