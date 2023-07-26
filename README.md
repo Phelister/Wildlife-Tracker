@@ -19,6 +19,7 @@ WILDLIFE_TRACKER
 
 ## Project setup instructions
 * Clone the project by running : git clone https://github.com/Phelister/Wildlife_Tracker.git
+* Sample SQL commands that you can run locally and test are included in src/main/resources/create.sql run them for a headstart
 * Use your favourite editor to open the folder (examples include:Intellij,Visual Studio Code etc).
 * Review the code and if there are any changes you believe would assist to improve the project raise a pull request.
 

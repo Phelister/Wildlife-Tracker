@@ -5,6 +5,13 @@ public class Sightings {
     private int animal_id;
     private String location;
     private String ranger_name;
+    private boolean deleted=false;
+
+    public Sightings(int animal_id, String location, String ranger_name) {
+        this.animal_id = animal_id;
+        this.location = location;
+        this.ranger_name = ranger_name;
+    }
 
 
     public int getId() {
