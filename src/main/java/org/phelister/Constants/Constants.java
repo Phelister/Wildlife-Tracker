@@ -1,4 +1,4 @@
-package org.phelister;
+package org.phelister.Constants;
 
 public class Constants {
     public static final String newBorn = "NEWBORN";
