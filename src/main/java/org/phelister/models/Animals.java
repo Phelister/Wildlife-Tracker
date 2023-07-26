@@ -7,6 +7,8 @@ public class Animals {
     private String health;
     private int age;
 
+    private boolean deleted=false;
+
     public Animals(String type, String name, String health, int age) {
         this.type = type;
         this.name = name;
