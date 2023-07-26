@@ -3,7 +3,8 @@ package org.phelister.models;
 public class Sightings {
     private int id;
     private int animal_id;
-    private Location location;
+    private String location;
+    private String ranger_name;
 
 
     public int getId() {
@@ -22,21 +23,21 @@ public class Sightings {
         this.animal_id = animal_id;
     }
 
-    public Location getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
     public String getRangerName() {
-        return RangerName;
+        return ranger_name;
     }
 
     public void setRangerName(String rangerName) {
-        RangerName = rangerName;
+        ranger_name = rangerName;
     }
 
-    private String RangerName;
+
 }

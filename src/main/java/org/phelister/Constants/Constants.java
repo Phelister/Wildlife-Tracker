@@ -1,4 +1,4 @@
-package org.phelister;
+package org.phelister.Constants;
 
 public class Constants {
     public static final String newBorn = "NEWBORN";
@@ -9,5 +9,8 @@ public class Constants {
     public static final String okay = "OKAY";
     public static final String normal= "NORMAL";
     public static final String endangered = "ENDANGERED";
+    public static final String zoneA = "ZONEA";
+    public static final String nearRiver= "NEAR_RIVER";
+    public static final String neQuadrant = "NE_QUADRANT";
 
 }

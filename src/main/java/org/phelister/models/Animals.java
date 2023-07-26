@@ -2,8 +2,10 @@ package org.phelister.models;
 
 public class Animals {
     private int id;
-    private Type type;
+    private String type;
     private String name;
+    private String health;
+    private String age;
 
     public int getId() {
         return id;
@@ -13,11 +15,11 @@ public class Animals {
         this.id = id;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -29,22 +31,20 @@ public class Animals {
         this.name = name;
     }
 
-    public Health getHealth() {
+    public String getHealth() {
         return health;
     }
 
-    public void setHealth(Health health) {
+    public void setHealth(String health) {
         this.health = health;
     }
 
-    public Age getAge() {
+    public String  getAge() {
         return age;
     }
 
-    public void setAge(Age age) {
+    public void setAge(String  age) {
         this.age = age;
     }
 
-    private Health health;
-    private Age age;
 }
