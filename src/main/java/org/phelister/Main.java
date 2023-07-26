@@ -19,6 +19,9 @@ public class Main {
         get("/wildlife/add", (req, res)->{
             return SharedUtils.render(new HashMap<>(), "wildlife-details.hbs");
         });
+        get("/animal/add", (req, res)->{
+            return SharedUtils.render(new HashMap<>(), "animal-details.hbs");
+        });
 
         post("/create-sighting", (req, res)->{
             String id = req.queryParams("id");
@@ -48,24 +51,17 @@ public class Main {
 
         post("/create-animal", (req, res)->{
             String category = req.queryParams("category");
-            String id = req.queryParams("id");
             String name = req.queryParams("name");
             String health= req.queryParams("health");
             String age=req.queryParams("age");
-            String location =req.queryParams("location");
-            String rangerName =req.queryParams("rangername");
 
             try{
-                if(category==null || category.length()==0 || id ==null  || id.length()==0|| name==null|| name.length()==0||health==null ||health.length()==0 || age ==null || age.length()==0
-                        || location==null || location.length()==0 || rangerName==null || rangerName.length()==0 ){
+                if(category==null || category.length()==0 || name==null|| name.length()==0|| health==null ||health.length()==0 || age ==null || age.length()==0){
                     throw new IllegalArgumentException("invalid input all fields have to be provided");
                 }
-                int latestId= Integer.valueOf(id);
                 int latestAge= Integer.valueOf(age);
-
-
-
-
+                Animals animals= new Animals(category,name,health,latestAge);
+                AnimalsDao.createAnimal(animals);
 
             }catch (Exception e){
 

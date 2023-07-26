@@ -5,7 +5,14 @@ public class Animals {
     private String type;
     private String name;
     private String health;
-    private String age;
+    private int age;
+
+    public Animals(String type, String name, String health, int age) {
+        this.type = type;
+        this.name = name;
+        this.health = health;
+        this.age = age;
+    }
 
     public int getId() {
         return id;
@@ -39,11 +46,11 @@ public class Animals {
         this.health = health;
     }
 
-    public String  getAge() {
+    public int  getAge() {
         return age;
     }
 
-    public void setAge(String  age) {
+    public void setAge(int  age) {
         this.age = age;
     }
 
