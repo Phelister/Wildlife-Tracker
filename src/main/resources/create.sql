@@ -3,7 +3,7 @@ CREATE TABLE "animals" (
                           "name" varchar UNIQUE,
                           "type" varchar,
                           "health" varchar,
-                          "age" int,
+                          "age" varchar,
                           "deleted" boolean DEFAULT false
 );
 
@@ -29,5 +29,5 @@ INSERT INTO animals (name, type,health,age,deleted) VALUES ('CROCODILE1','NORMAL
 
 INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('ZONEA', 'Brian',1);
 INSERT INTO sightings (location, ranger_name, animal_id) VALUES ('NEAR_RIVER', 'Christine',2);
-INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('NE_QUADRANT', 'Phelister',3);
+INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('NE_QUADRANT', 'Phelly',3);
 INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('NEAR_RIVER', 'Fiona', 4);
