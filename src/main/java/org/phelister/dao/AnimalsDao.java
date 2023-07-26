@@ -25,4 +25,19 @@ public class AnimalsDao {
             return false;
         }
     }
+
+
+    public static Animals findAnimalById(int animalId) {
+        try {
+            String querySquads = "SELECT * FROM animals WHERE NOT deleted AND id = :id;";
+            Animals animals = connection.createQuery(querySquads)
+                    .addParameter("id", animalId)
+                    .executeAndFetchFirst(Animals.class);
+//
+            return animals;
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
+            return  null;
+        }
+    }
 }
