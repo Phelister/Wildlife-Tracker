@@ -30,6 +30,8 @@ public class Main {
                 || location==null || location.length()==0 || rangerName==null || rangerName.length()==0 ){
                     throw new IllegalArgumentException("invalid input all fields have to be provided");
                 }
+                int latestId= Integer.valueOf(id);
+                int latestAge= Integer.valueOf(age);
 
 
 
