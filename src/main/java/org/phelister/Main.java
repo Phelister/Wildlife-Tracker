@@ -57,10 +57,14 @@ public class Main {
 
             try{
                 if(category==null || category.length()==0 || name==null|| name.length()==0|| health==null ||health.length()==0 || age ==null || age.length()==0){
+                   System.out.print(category);
+                    System.out.print(name);
+                    System.out.print(health);
+                    System.out.print(age);
                     throw new IllegalArgumentException("invalid input all fields have to be provided");
                 }
-                int latestAge= Integer.valueOf(age);
-                Animals animals= new Animals(category,name,health,latestAge);
+
+                Animals animals= new Animals(category,name,health,age);
                 AnimalsDao.createAnimal(animals);
 
             }catch (Exception e){

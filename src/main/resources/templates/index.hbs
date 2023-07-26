@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-yellow bg-yellow">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand fw-bold" href="#">
           <img
             src="/images/logo.jpg"
             alt="Wild Life Tracker "
@@ -55,20 +55,28 @@
         <div class="container">
 
 
-        <div class="row p-2 m-2">
-             <a href="/wildlife/add">
-                 <button type="button" class="btn btn-success btn-lg col-md-4">
-                    Enter Sighting
-                 </button>
-             </a>
-          </div
-          <div class="row p-2 m-2">
+ <div class="row p-2 m-2">
+ <p class="lead text-success">
+            If animal does not have a number tag (register then enter the sightings below):
+           </p>
                        <a href="/animal/add">
                            <button type="button" class="btn btn-success btn-lg col-md-4">
                               Register an animal
                            </button>
                        </a>
                     </div
+
+        <div class="row p-2 m-2">
+        <p class="lead text-success  d-flex align-items-center justify-content-center">
+           If animal has a number tag enter tagging below:
+          </p>
+             <a href="/wildlife/add">
+                 <button type="button" class="btn btn-success btn-lg col-md-4">
+                    Enter Sighting
+                 </button>
+             </a>
+          </div
+
        </div>
               </div>
 

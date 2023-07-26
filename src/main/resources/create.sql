@@ -3,7 +3,7 @@ CREATE TABLE "animals" (
                           "name" varchar UNIQUE,
                           "type" varchar,
                           "health" varchar,
-                          "age" int,
+                          "age" varchar,
                           "deleted" boolean DEFAULT false
 );
 
@@ -19,14 +19,15 @@ ALTER TABLE "sightings" ADD FOREIGN KEY ("animal_id") references "animals" ("id"
 
 
 -- Sample Animals
-INSERT INTO strength (name, score) VALUES ('FEARLESS', 10);
-INSERT INTO strength (name, score) VALUES ('RUNNING', 10);
-INSERT INTO strength (name, score) VALUES ('WEAPONS', 20);
-INSERT INTO strength (name, score) VALUES ('KARATE', 5);
+INSERT INTO animals (name, type,health,age,deleted) VALUES ('GIRAFFE1','NORMAL','HEALTHY','YOUNG');
+INSERT INTO animals (name, type,health,age,deleted) VALUES ('BIRD1','NORMAL','HEALTHY','YOUNG');
+INSERT INTO animals (name, type,health,age,deleted) VALUES ('WILDBEEST1','NORMAL','HEALTHY','YOUNG');
+INSERT INTO animals (name, type,health,age,deleted) VALUES ('CROCODILE1','NORMAL','HEALTHY','YOUNG');
+
 
 --Sample Sightings
 
-INSERT INTO weakness (name, score) VALUES ('FEAR', -20);
-INSERT INTO weakness (name, score) VALUES ('VENOM', -10);
-INSERT INTO weakness (name, score) VALUES ('HEIGHTS', -20);
-INSERT INTO weakness (name, score) VALUES ('SUN', 5);
+INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('ZONEA', 'Brian',1);
+INSERT INTO sightings (location, ranger_name, animal_id) VALUES ('NEAR_RIVER', 'Christine',2);
+INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('NE_QUADRANT', 'Phelly',3);
+INSERT INTO sightings (location, ranger_name,animal_id) VALUES ('NEAR_RIVER', 'Fiona', 4);

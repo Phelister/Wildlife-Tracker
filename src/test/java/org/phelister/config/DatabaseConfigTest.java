@@ -4,7 +4,7 @@ import org.sql2o.Sql2o;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DatabaseConfigTest {
+public class DatabaseConfigTest {
 
     public static Sql2o getDatabaseTest(){
         //database url and password

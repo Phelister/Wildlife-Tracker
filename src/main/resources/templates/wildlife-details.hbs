@@ -49,21 +49,21 @@
             <h3 class="text-center text-warning">WildLife Details</h3>
             <p class="text-center">Fill in the sighting Details of the Spotted wildLife below:</p>
 
-            <form method="post" action="/create-wildlife">
+            <form method="post" action="/create-sighting">
 
 
             <label for="id" class="=mt-2">WildLife Id:</label>
             <input  id="id" name="id" type="number" class="form-control" placeholder="id">
 
               <label for="location" class="form-label mt-2">Location:</label>
-                    <select class="form-select" id="location">
+                    <select class="form-select" id="location" name="location">
                                 <option value="Zone-A" selected>Zone A</option>
                                <option value="Near-river">Near-river</option>
                                <option value="NE-Quadrant">NE-Quadrant</option>
                    </select>
 
               <label for="rangername" class="form-label mt-2">Ranger Name:</label>
-                  <input type="text" class="form-control" id="rangername"  placeholder="Ranger Name"/>
+                  <input type="text" class="form-control" id="rangername" name="rangername" placeholder="Ranger Name"/>
 
             <div class="mb-4 text-center mt-3">
                 <input  type="submit" class="btn btn-primary"  value="Save Sighting">
