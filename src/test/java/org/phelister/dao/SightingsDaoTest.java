@@ -1,10 +1,10 @@
 package org.phelister.dao;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.phelister.config.DatabaseConfigTest;
-import org.phelister.models.Animals;
 import org.phelister.models.Sightings;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -44,6 +44,13 @@ class SightingsDaoTest {
         assertEquals(zoneA,sightings1.getLocation());
         assertNotEquals("healthy",sightings1.getLocation());
 
+    }
+    @AfterEach
+    void tearDown() {
+        String query = "DELETE FROM sightings WHERE animal_id = :id;";
+        connection.createQuery(query)
+                .addParameter("id", sightings.getId())
+                .executeUpdate();
     }
 
 

@@ -1,5 +1,6 @@
 package org.phelister.dao;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ class AnimalsDaoTest {
     Animals animals=null;
 
     @BeforeEach
-    void eachSetUp(){
+    static void eachSetUp(){
 
        Animals animals = new Animals(normal,"Impala1",healthy,young);
         String query = "INSERT INTO animals ( type ,name, health, age) VALUES (:type,:name, :health, :age);";
@@ -62,6 +63,11 @@ class AnimalsDaoTest {
     }
 
 
-
-
+    @AfterEach
+    void tearDown() {
+        String query = "DELETE FROM animals WHERE id = :id;";
+        connection.createQuery(query)
+                .addParameter("id", animals.getId())
+                .executeUpdate();
+    }
 }
