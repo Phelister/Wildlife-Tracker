@@ -5,6 +5,7 @@ public class Sightings {
     private int animal_id;
     private Location location;
 
+
     public int getId() {
         return id;
     }
