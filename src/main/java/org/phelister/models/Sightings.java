@@ -4,6 +4,7 @@ public class Sightings {
     private int id;
     private int animal_id;
     private String location;
+    private String Ranger_name;
 
 
     public int getId() {
@@ -31,12 +32,12 @@ public class Sightings {
     }
 
     public String getRangerName() {
-        return RangerName;
+        return Ranger_name;
     }
 
     public void setRangerName(String rangerName) {
-        RangerName = rangerName;
+        Ranger_name = rangerName;
     }
 
-    private String RangerName;
+
 }
