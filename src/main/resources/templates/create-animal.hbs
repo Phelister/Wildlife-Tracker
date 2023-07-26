@@ -46,27 +46,40 @@
     >
         <div class="d-sm-flex align-items-center justify-content-between">
           <div class="align-items-center ">
-            <h3 class="text-center text-warning">WildLife Details</h3>
-            <p class="text-center">Fill in the sighting Details of the Spotted wildLife below:</p>
+            <h3 class="text-center text-warning">Animal Details</h3>
+            <p class="text-center">Fill in animal details below:</p>
 
-            <form method="post" action="/create-wildlife">
+            <form method="post" action="/create-animal">
 
-
+            <label for="category" class="form-label mt-2">Animal Category:</label>
+            <select class="form-select" id="category">
+                <option value="normal" selected>Normal</option>
+                <option value="endangered">Endangered species</option>
+            </select>
             <label for="id" class="=mt-2">WildLife Id:</label>
             <input  id="id" name="id" type="number" class="form-control" placeholder="id">
 
-              <label for="location" class="form-label mt-2">Location:</label>
-                    <select class="form-select" id="location">
-                                <option value="Zone-A" selected>Zone A</option>
-                               <option value="Near-river">Near-river</option>
-                               <option value="NE-Quadrant">NE-Quadrant</option>
-                   </select>
+            <label for="name" class="form-label mt-2">WildLife Name:</label>
+           <input type="text" class="form-control" id="name"  placeholder="name"/>
 
-              <label for="rangername" class="form-label mt-2">Ranger Name:</label>
-                  <input type="text" class="form-control" id="rangername"  placeholder="Ranger Name"/>
+            <label for="category" class="form-label mt-2">Health Status:</label>
+            <select class="form-select" id="health">
+                <option value="healthy" selected>Healthy</option>
+                <option value="ill">ill</option>
+                <option value="okay">okay</option>
+            </select>
+
+            <label for="age" class="form-label mt-2">Age:</label>
+             <select class="form-select" id="age">
+                   <option value="new-born" selected>New Born</option>
+                  <option value="young">Young</option>
+                  <option value="adult">Adult</option>
+             </select>
+
+
 
             <div class="mb-4 text-center mt-3">
-                <input  type="submit" class="btn btn-primary"  value="Save Sighting">
+                <input  type="submit" class="btn btn-primary"  value="Save">
             </div>
 
              </form>

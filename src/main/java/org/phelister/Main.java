@@ -1,4 +1,8 @@
 package org.phelister;
+import org.phelister.dao.AnimalsDao;
+import org.phelister.dao.SightingsDao;
+import org.phelister.models.Animals;
+import org.phelister.models.Sightings;
 import org.phelister.utils.SharedUtils;
 
 import java.util.HashMap;
@@ -27,6 +31,11 @@ public class Main {
                     throw new IllegalArgumentException("invalid input all fields have to be provided");
                 }
                 int latestId= Integer.valueOf(id);
+                Animals animal=AnimalsDao.findAnimalById(latestId);
+                Sightings sightings= new Sightings(animal.getId(), location, rangerName);
+
+                //save sighting
+                SightingsDao.createSighting(sightings);
 
             }catch (Exception e){
 
