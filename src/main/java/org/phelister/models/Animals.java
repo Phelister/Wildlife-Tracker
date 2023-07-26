@@ -5,11 +5,11 @@ public class Animals {
     private String type;
     private String name;
     private String health;
-    private int age;
+    private String age;
 
     private boolean deleted=false;
 
-    public Animals(String type, String name, String health, int age) {
+    public Animals(String type, String name, String health, String age) {
         this.type = type;
         this.name = name;
         this.health = health;
@@ -48,11 +48,11 @@ public class Animals {
         this.health = health;
     }
 
-    public int  getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int  age) {
+    public void setAge(String  age) {
         this.age = age;
     }
 
