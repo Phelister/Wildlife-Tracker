@@ -1,17 +1,23 @@
 package org.phelister.dao;
 
+import org.phelister.config.DatabaseConfig;
+import org.phelister.models.Animals;
 import org.phelister.models.Sightings;
 import org.sql2o.Connection;
+import org.sql2o.Sql2o;
 
 public class AnimalsDao {
+    private static final Sql2o sql2o = DatabaseConfig.getDatabaseProduction();
 
-    public static boolean  createSighting(Sightings sightings) {
-        try (Connection connection = sql2o.open()) {
-            String query = "INSERT INTO sightings ( animal_id ,location, ranger_name) VALUES (:animalId,:location, :rangerName);";
+    private static Connection connection = sql2o.open();
+    public static boolean  createAnimal(Animals animals) {
+        try {
+            String query = "INSERT INTO animals ( type ,name, health, age) VALUES (:type,:name, :health, :age);";
             connection.createQuery(query)
-                    .addParameter("animalId", sightings.getAnimal_id())
-                    .addParameter("location", sightings.getLocation())
-                    .addParameter("rangerName",sightings.getRangerName())
+                    .addParameter("type", animals.getType())
+                    .addParameter("name", animals.getName())
+                    .addParameter("health",animals.getHealth())
+                    .addParameter("age",animals.getAge())
                     .executeUpdate();
             return true;
         } catch (Exception exception) {
