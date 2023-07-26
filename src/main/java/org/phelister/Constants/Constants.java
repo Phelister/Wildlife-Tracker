@@ -13,6 +13,4 @@ public class Constants {
     public static final String nearRiver= "NEAR_RIVER";
     public static final String neQuadrant = "NE_QUADRANT";
 
-
-
 }
