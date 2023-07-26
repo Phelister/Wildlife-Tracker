@@ -29,8 +29,8 @@ public class AnimalsDao {
 
     public static Animals findAnimalById(int animalId) {
         try {
-            String querySquads = "SELECT * FROM animals WHERE NOT deleted AND id = :id;";
-            Animals animals = connection.createQuery(querySquads)
+            String queryAnimals= "SELECT * FROM animals WHERE NOT deleted AND id = :id;";
+            Animals animals = connection.createQuery(queryAnimals)
                     .addParameter("id", animalId)
                     .executeAndFetchFirst(Animals.class);
 //
