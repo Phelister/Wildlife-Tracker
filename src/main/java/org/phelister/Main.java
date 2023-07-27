@@ -7,12 +7,11 @@ import org.phelister.utils.SharedUtils;
 
 import java.util.HashMap;
 
-import static spark.Spark.post;
-import static spark.Spark.get;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static spark.Spark.*;
+
 public class Main {
     public static void main(String[] args) {
+        staticFileLocation("/public");
         get("/", (req, res)->{
             return SharedUtils.render(new HashMap<>(), "index.hbs");
         });
