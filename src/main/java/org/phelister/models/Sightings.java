@@ -1,9 +1,12 @@
 package org.phelister.models;
 
+import java.time.Instant;
+
 public class Sightings {
     private int id;
     private int animal_id;
     private String location;
+    private String timestamp;
     private String ranger_name;
     private boolean deleted=false;
 
@@ -11,6 +14,7 @@ public class Sightings {
         this.animal_id = animal_id;
         this.location = location;
         this.ranger_name = ranger_name;
+        this.timestamp = Instant.now().toString();
     }
 
 
