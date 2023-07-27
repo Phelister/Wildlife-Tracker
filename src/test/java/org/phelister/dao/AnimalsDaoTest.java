@@ -12,7 +12,7 @@ import org.sql2o.Sql2o;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.phelister.Constants.Constants.*;
 
-class AnimalsDaoTest {
+class AnimalsDaoTest{
 
     private static final Sql2o sql2o  = DatabaseConfigTest.getDatabaseTest();
 
